@@ -1,4 +1,3 @@
-/* Chatbot Container */
 .chatbot-container {
     position: fixed;
     bottom: 20px;
@@ -6,7 +5,6 @@
     z-index: 1000;
 }
 
-/* Chatbot Icon Button */
 .chatbot-icon {
     background-color: #007bff;
     border: none;
@@ -32,7 +30,6 @@
     height: 28px;
 }
 
-/* Chatbox UI */
 .chatbox {
     background-color: #ffffff;
     width: 360px;
@@ -55,7 +52,6 @@
     opacity: 1;
 }
 
-/* Chatbox Header */
 .chat-header {
     background-color: #007bff;
     color: white;
@@ -71,27 +67,27 @@
     background: none;
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     transition: color 0.3s ease;
+    width: 30px;
 }
 
 .close-chat:hover {
     color: #f8d7da;
 }
 
-/* Chat Messages Area */
 .chat-messages {
     padding: 12px;
     overflow-y: auto;
-    max-height: 380px;
+    max-height: 400px; /* Adjusted to allow space for fixed input */
     background: #f8f9fa;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 60px; /* Extra padding to prevent content from hiding behind input */
 }
 
-/* Chat Messages */
 .message {
     max-width: 80%;
     padding: 10px 14px;
@@ -115,45 +111,48 @@
     border-bottom-left-radius: 4px;
 }
 
-/* Chat Input Area */
+/* Fixed input bar at bottom */
 .chat-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 10px;
     border-top: 1px solid #ddd;
     background: white;
     display: flex;
-    gap: 8px;
     align-items: center;
+    gap: 8px;
 }
 
-/* Input Box */
 .chat-input input {
     flex: 1;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 14px;
     border-radius: 20px;
     background: #f1f1f1;
     outline: none;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Send Button */
 .send-button {
-    background-color: #007bff;
     border: none;
-    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
     border-radius: 50%;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .send-button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
-}
-
-.send-button img {
-    width: 20px;
-    height: 20px;
 }
